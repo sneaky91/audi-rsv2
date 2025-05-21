@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Корзина</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Корзина</h1>
+    <header>
+        <nav>
+            <a class="nav-link" href="index.html">Головна сторінка</a>
+            <a class="nav-link" href="index2.html">Порівняння машин</a>
+        </nav>
+    </header>
+  <div id="cart-content"></div>
+  <div id="payment" style="text-align:center; margin-top:30px;"></div>
+
+  <script>
+    const cart = localStorage.getItem('cart');
+    let content = '';
+    if (cart === 'rs6') {
+      content = `
+        <h2>Audi RS6</h2>
+        <img src="https://learn.logikaschool.com/uploads/student/5262983/675d4a8461ce5.jpg" width="215px" height="200px">
+        <p>Додано до корзини: Audi RS6</p>
+      `;
+    } else if (cart === 'rs7') {
+      content = `
+        <h2>Audi RS7</h2>
+        <img src="https://learn.logikaschool.com/uploads/student/5262983/675d4ac590682.jpg" width="315px" height="200px">
+        <p>Додано до корзини: Audi RS7</p>
+      `;
+    } else {
+      content = '<p>Корзина порожня</p>';
+    }
+    document.getElementById('cart-content').innerHTML = content;
+
+
+    if (cart === 'rs6' || cart === 'rs7') {
+      document.getElementById('payment').innerHTML = `
+        <button style="padding:15px 30px; font-size:18px; margin:10px;">Оплатити дебетовою або кредитною картою</button>
+        <button style="padding:15px 30px; font-size:18px; margin:10px; background:#ffc439; color:#222; border:none;">
+          Швидко з PayPal
+        </button>
+      `;
+    }
+  </script>
+</body>
+</html>
