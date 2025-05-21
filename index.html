@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="style.css">
+  <title>Ауді автосалон</title>
+  <body>
+    <header> 
+      <h1><img src="https://learn.logikaschool.com/uploads/student/5262983/675d511b0f1a2.png" width="85px" height="90px" />
+      </h1>
+      <h1>автосалон AUDI RS</h1>
+          <nav>
+
+            <a class="nav-link" href="#rs6" >AUDI rs6</a>
+            <a class="nav-link" href="#rs7" >AUDI rs7</a>
+            <a class="nav-link" href="index2.html">Порівняння машин</a>
+            <a class="nav-link" href="index3.html">Кошик</a>
+            <a class="nav-link" href="#about">Про нас</a>
+            <a class="nav-link" href="#link">Посилання на соц мережі</a>
+            <a class="nav-link" href="#creator">Зробив сайт</a>
+
+          </nav>
+
+    </header>
+    <main>
+          <h1>Наші Автомобілі</h1>
+          <section class="archenal">
+            <article id="rs6">
+              <h2>Audi rs6 </h2>
+              <img src="https://learn.logikaschool.com/uploads/student/5262983/675d4a8461ce5.jpg" width="215px" height="200px">
+              <p class="RS6"><b><i>Audi RS6-це не просто спортивний універсал, а й автомобіль для тих, хто шукає баланс між розкішшю та практичністю.<br>Оснащена потужним 4.0-літровим V8 двигуном з подвійним турбонаддувом, який розвиває 600 кінських сил і 800 Нм крутного моменту.<br>Цей мотор дозволяє автомобілю прискорюватися від 0 до 100 км/год за неймовірні 3.6 секунди. Максимальна швидкість 300км/год 199mph</i></b></p>
+              <button class="article-but" onclick="addToCart('rs6'); window.location.href='index3.html';">в кошик</button>
+            </article>
+            <article id="rs7">
+              <h2>Audi rs7</h2>
+              <Img src="https://learn.logikaschool.com/uploads/student/5262983/675d4ac590682.jpg" width="315px" height="200px">
+              <p class="rs7"><b><i>це преміальний спортивний ліфтбек, що поєднує в собі динаміку суперкара, розкіш седана і практичність повсякденного автомобіля. <br>RS7 створена для тих, хто хоче отримати максимальне задоволення від водіння без компромісів.</i></b></p>
+              <button class="article-but" onclick="addToCart('rs7'); window.location.href='index3.html';">в кошик</button>
+            </article>
+          </section>
+    </main>
+    <footer>
+      <p id="about"><b><i>Про нас.<br>Ласкаво просимо до офіційного автосалону Audi — місця, де інновації, стиль і надійність поєднуються в кожному автомобілі.<br>Ми – команда професіоналів, що понад 116 років представляє бренд Audi в Україні.<br> Наша місія — дарувати клієнтам не просто автомобілі, а унікальний досвід володіння технікою, що втілює німецьку якість, сучасні технології та емоції від водіння.<br>У нашому автосалоні ви знайдете повний модельний ряд Audi: від динамічних седанів і кросоверів до електромобілів нового покоління.<br> Ми пропонуємо індивідуальний підхід до кожного клієнта, прозорі умови придбання, професійне обслуговування та сертифікований сервіс.</i></b></p>
+      <a  id="link" >https://www.audi.ua/audi-models</a>
+      <a id="creator" ><b><i>https://github.com/sneaky91</i></b></a>
+    </footer>
+
+    <script>
+function addToCart(car) {
+  localStorage.setItem('cart', car);
+}
+</script>
+  </body>
+</html>
